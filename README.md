@@ -8,8 +8,6 @@
 
 This repository contains the solution for the ASR (Automatic Speech Recognition) challenge as part of the TIL-25 Hackathon. The primary goal was to fine-tune an effective ASR model using a pre-trained architecture and deploy it as a service meeting specified performance criteria.
 
-*(You can add more specific details about the challenge problem here if you like.)*
-
 ## 💻 Technologies Used
 
 *   **Python:** Core programming language for model development and scripting.
