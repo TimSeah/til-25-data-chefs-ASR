@@ -2,11 +2,11 @@
 
 **Hackathon:** TIL-25 Hackathon
 **Team:** Data Chefs
-**Author:** lolkabash
+**Author:** dgxy2002
 
 ## 📖 Description
 
-This repository contains the solution for the ASR (Optical Character Recognition) challenge as part of the TIL-25 Hackathon. The primary goal was to train an effective ASR model.
+This repository contains the solution for the ASR (Automatic Speech Recognition) challenge as part of the TIL-25 Hackathon. The primary goal was to train an effective ASR model.
 
 *(You can add more specific details about the challenge problem here if you like.)*
 
@@ -15,38 +15,38 @@ This repository contains the solution for the ASR (Optical Character Recognition
 *   **Python:** Core programming language for model development and scripting.
 *   **Jupyter Notebook:** Used for experimentation, data exploration, and model training iterations.
 *   **Shell Scripts:** For automation of tasks like data preprocessing, training initiation, etc.
-*   **PaddleASR:** For the initial pretrained model and finetuning.
-*   **OpenCV, NumPy, Pandas, Matplotlib, PyTorch/TensorFlow**
+*   **Whisper:** Utilized as the ASR model for this challenge.
+*   **NumPy, Pandas, Matplotlib, PyTorch/TensorFlow** (Specify which of these were actually used, or add/remove as appropriate)
 
 ## ⚙️ Working Process & Solution
 
 This section outlines the general steps taken to address the ASR challenge.
 
 ### 1. Data Collection & Preparation
-*   **Dataset Used:** (Describe the dataset(s) used, e.g., public datasets, custom collected data. Mention size, type of images, etc.)
-*   **Preprocessing:** (Detail the steps taken to clean and prepare the images for the ASR model, e.g., resizing, noise reduction, binarization, augmentation.)
-*   **Labeling:** (If custom data was used, how was it labeled? E.g., tools used like LabelImg, or programmatic approaches.)
+*   **Dataset Used:** (Describe the dataset(s) used, e.g., public datasets like LibriSpeech, Common Voice, or custom collected data. Mention size, type of audio, language, etc.)
+*   **Preprocessing:** (Detail the steps taken to clean and prepare the audio data for the Whisper model, e.g., resampling, noise reduction, silence trimming, format conversion, augmentation.)
+*   **Labeling:** (If custom data was used, how was it transcribed? E.g., manual transcription, tools used.)
 
 ### 2. Model Selection & Architecture
-*   **Model Choice:** (Explain why a particular ASR model or architecture was chosen. E.g., CRNN, ViT-based models, specific pre-trained models.)
-*   **Architecture Details:** (Briefly describe the model architecture if it was custom or significantly modified.)
-*   **Pre-trained Models:** (Specify if any pre-trained weights were used as a starting point, e.g., from PaddleASR model zoo.)
+*   **Model Choice:** The **Whisper** model by OpenAI was chosen for this ASR challenge. (Explain why Whisper was selected, e.g., its strong performance on diverse datasets, availability of pre-trained versions, ease of use.)
+*   **Architecture Details:** Whisper is a transformer-based encoder-decoder model. (You can add more details if you used a specific variant or made modifications, but generally, this is a good starting point.)
+*   **Pre-trained Models:** (Specify which version of the pre-trained Whisper model was used, e.g., tiny, base, small, medium, large. Mention if it was fine-tuned.)
 
 ### 3. Training Process
-*   **Environment Setup:** (Briefly mention the environment, e.g., local machine specs, cloud VM, specific Python/library versions.)
-*   **Training Configuration:** (Key hyperparameters, loss functions, optimizers, batch size, number of epochs.)
-*   **Fine-tuning:** (If a pre-trained model was used, describe the fine-tuning strategy.)
-*   **Challenges Faced:** (Any significant challenges during training and how they were overcome.)
+*   **Environment Setup:** (Briefly mention the environment, e.g., local machine specs with GPU, cloud VM (AWS, GCP, Azure), specific Python/library versions like `openai-whisper`.)
+*   **Training Configuration:** (If fine-tuning Whisper: Key hyperparameters, loss functions, optimizers, batch size, number of epochs. If using Whisper out-of-the-box for transcription, this section might be more about inference parameters.)
+*   **Fine-tuning:** (If a pre-trained Whisper model was fine-tuned, describe the fine-tuning strategy, dataset used for fine-tuning, and any specific techniques applied.)
+*   **Challenges Faced:** (Any significant challenges during data preparation, training/fine-tuning, or inference with Whisper and how they were overcome.)
 
 ### 4. Evaluation
-*   **Metrics Used:** (How was the model performance measured? E.g., Character Error Rate (CER), Word Error Rate (WER), accuracy, precision, recall.)
-*   **Validation Strategy:** (How was the model validated during training? E.g., validation set, cross-validation.)
-*   **Test Set Performance:** (Results on the final test set.)
+*   **Metrics Used:** (How was the model performance measured? E.g., Word Error Rate (WER) is standard for ASR. Character Error Rate (CER) can also be used.)
+*   **Validation Strategy:** (How was the model validated? E.g., using a dedicated validation set. Describe the characteristics of this set.)
+*   **Test Set Performance:** (Results on the final test set using the chosen Whisper model.)
 
 ### 5. Results & Key Findings
-*   **Final Model Performance:** (Summarize the best results achieved.)
-*   **Insights:** (Any interesting insights gained from the process or results.)
-*   **Visualizations:** (Consider linking to or embedding examples of ASR output if possible.)
+*   **Final Model Performance:** (Summarize the best WER/CER achieved with Whisper.)
+*   **Insights:** (Any interesting insights gained from using Whisper, its performance on specific types of audio, or comparison to other approaches if applicable.)
+*   **Visualizations:** (Consider linking to or embedding examples of ASR output if possible, or tables summarizing performance.)
 
 ## 🚀 Setup and Usage
 
