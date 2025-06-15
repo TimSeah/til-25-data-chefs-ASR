@@ -66,7 +66,7 @@ This section outlines the steps taken to fine-tune the Wav2Vec2 model for the AS
     *   Save total limit: 2 (to keep only the best/latest checkpoints based on evaluation metric)
 *   **Trainer Initialization:** The Hugging Face `Trainer` was used to manage the fine-tuning process, taking the model, training arguments, preprocessed train/evaluation datasets, and potentially a `compute_metrics` function for WER calculation during evaluation.
 *   **Training Execution:** The `trainer.train()` method was called to start the fine-tuning.
-*   **Challenges Faced:** (e.g., "Initial fine-tuning runs resulted in slower than expected inference times. Experimentation with quantization or ONNX conversion was considered but not fully implemented due to time constraints." or "Achieving the target WER required careful hyperparameter tuning, particularly the learning rate and number of epochs.")
+*   **Challenges Faced:** Not enough GPU space and time constraints.
 
 ### 5. Evaluation
 
@@ -146,14 +146,9 @@ The service must return a JSON dictionary:
     *   Further improvements in speed might be achievable through model quantization (e.g., to INT8) or conversion to an optimized runtime format like ONNX, though this was not explored in depth for this submission.
     *   The choice of learning rate and scheduler (if used) had a noticeable impact on convergence and final WER.
 *   **Audio Demonstrations & Visualizations:**
-    *   **Sample: Operation Echelon Update**
-        *   Audio: [Listen to sample_0.wav](./media/asr/sample_0.wav)
+    *   **Sample: Special Agent Dex Report (sample_1.wav from `lolkabash/til-25-data-chefs` repo)**
+        *   Audio: [Listen to sample_1.wav](https://raw.githubusercontent.com/lolkabash/til-25-data-chefs/main/media/asr/sample_1.wav)
         *   Ground Truth: "Operation Echelon has yielded significant progress in our pursuit of the rogue AI droid BH-2000. Our surveillance drones have identified its current location in sector 7G, and our ground units are mob..."
-        *   Model's Prediction: *(You can fill this in with your model's output for this sample)*
-    *   (Consider linking to or embedding:
-        *   Training/validation loss curves and WER plots from TensorBoard logs.
-        *   A confusion matrix or examples of common error types if detailed error analysis was performed.
-        *   Examples of challenging audio segments and their transcriptions (before and after fine-tuning if applicable).)
 *   **Future Work:**
     *   Experiment with different pre-trained model sizes (e.g., `wav2vec2-base` vs. `wav2vec2-large-robust`) to balance accuracy and speed.
     *   Implement more advanced data augmentation techniques for audio.
