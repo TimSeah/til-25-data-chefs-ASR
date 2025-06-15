@@ -6,7 +6,7 @@
 
 ## 📖 Description
 
-This repository contains the solution for the OCR (Optical Character Recognition) challenge as part of the TIL-25 Hackathon. The primary goal was to train an effective OCR model.
+This repository contains the solution for the ASR (Optical Character Recognition) challenge as part of the TIL-25 Hackathon. The primary goal was to train an effective ASR model.
 
 *(You can add more specific details about the challenge problem here if you like.)*
 
@@ -15,22 +15,22 @@ This repository contains the solution for the OCR (Optical Character Recognition
 *   **Python:** Core programming language for model development and scripting.
 *   **Jupyter Notebook:** Used for experimentation, data exploration, and model training iterations.
 *   **Shell Scripts:** For automation of tasks like data preprocessing, training initiation, etc.
-*   **PaddleOCR:** For the initial pretrained model and finetuning.
+*   **PaddleASR:** For the initial pretrained model and finetuning.
 *   **OpenCV, NumPy, Pandas, Matplotlib, PyTorch/TensorFlow**
 
 ## ⚙️ Working Process & Solution
 
-This section outlines the general steps taken to address the OCR challenge.
+This section outlines the general steps taken to address the ASR challenge.
 
 ### 1. Data Collection & Preparation
 *   **Dataset Used:** (Describe the dataset(s) used, e.g., public datasets, custom collected data. Mention size, type of images, etc.)
-*   **Preprocessing:** (Detail the steps taken to clean and prepare the images for the OCR model, e.g., resizing, noise reduction, binarization, augmentation.)
+*   **Preprocessing:** (Detail the steps taken to clean and prepare the images for the ASR model, e.g., resizing, noise reduction, binarization, augmentation.)
 *   **Labeling:** (If custom data was used, how was it labeled? E.g., tools used like LabelImg, or programmatic approaches.)
 
 ### 2. Model Selection & Architecture
-*   **Model Choice:** (Explain why a particular OCR model or architecture was chosen. E.g., CRNN, ViT-based models, specific pre-trained models.)
+*   **Model Choice:** (Explain why a particular ASR model or architecture was chosen. E.g., CRNN, ViT-based models, specific pre-trained models.)
 *   **Architecture Details:** (Briefly describe the model architecture if it was custom or significantly modified.)
-*   **Pre-trained Models:** (Specify if any pre-trained weights were used as a starting point, e.g., from PaddleOCR model zoo.)
+*   **Pre-trained Models:** (Specify if any pre-trained weights were used as a starting point, e.g., from PaddleASR model zoo.)
 
 ### 3. Training Process
 *   **Environment Setup:** (Briefly mention the environment, e.g., local machine specs, cloud VM, specific Python/library versions.)
@@ -46,7 +46,7 @@ This section outlines the general steps taken to address the OCR challenge.
 ### 5. Results & Key Findings
 *   **Final Model Performance:** (Summarize the best results achieved.)
 *   **Insights:** (Any interesting insights gained from the process or results.)
-*   **Visualizations:** (Consider linking to or embedding examples of OCR output if possible.)
+*   **Visualizations:** (Consider linking to or embedding examples of ASR output if possible.)
 
 ## 🚀 Setup and Usage
 
@@ -58,8 +58,8 @@ This section outlines the general steps taken to address the OCR challenge.
 ### Installation
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/lolkabash/til-25-data-chefs-OCR.git
-    cd til-25-data-chefs-OCR
+    git clone https://github.com/lolkabash/til-25-data-chefs-ASR.git
+    cd til-25-data-chefs-ASR
     ```
 2.  (If Git LFS was used for model files, etc.)
     ```bash
@@ -79,8 +79,8 @@ This section outlines the general steps taken to address the OCR challenge.
 *   **Training:**
     *(Explain how to run the training scripts or notebooks.)*
     ```bash
-    # e.g., python train_ocr.py --config configs/my_config.yaml
-    # or jupyter notebook PaddleOCR_Training/CreateLabel.ipynb (based on previous interactions)
+    # e.g., python train_ASR.py --config configs/my_config.yaml
+    # or jupyter notebook PaddleASR_Training/CreateLabel.ipynb (based on previous interactions)
     ```
 *   **Inference/Prediction:**
     *(Explain how to use the trained model for predictions.)*
@@ -90,11 +90,11 @@ This section outlines the general steps taken to address the OCR challenge.
 
 ## 📁 File Structure
 ```
-til-25-data-chefs-OCR/
-├── PaddleOCR_Training/         # Main training scripts, notebooks, and model files (as per previous interactions)
+til-25-data-chefs-ASR/
+├── PaddleASR_Training/         # Main training scripts, notebooks, and model files (as per previous interactions)
 │   ├── CreateLabel.ipynb
 │   └── pretrained_models/
-│       └── en_PP-OCRv4_rec_train/
+│       └── en_PP-ASRv4_rec_train/
 │           ├── best_accuracy.pdparams
 │           └── best_accuracy.pdopt
 ├── configs/                    # Configuration files for training
