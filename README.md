@@ -146,8 +146,8 @@ The service must return a JSON dictionary:
     *   Further improvements in speed might be achievable through model quantization (e.g., to INT8) or conversion to an optimized runtime format like ONNX, though this was not explored in depth for this submission.
     *   The choice of learning rate and scheduler (if used) had a noticeable impact on convergence and final WER.
 *   **Audio Demonstrations & Visualizations:**
-    *   **Sample: Special Agent Dex Report (sample_1.wav from `lolkabash/til-25-data-chefs` repo)**
-        *   Audio: [Listen to sample_1.wav](https://raw.githubusercontent.com/lolkabash/til-25-data-chefs/main/media/asr/sample_1.wav)
+    *   **Sample: Special Agent Dex Report (sample_1.wav from `TimSeah/til-25-data-chefs` repo)**
+        *   Audio: [Listen to sample_1.wav](https://raw.githubusercontent.com/TimSeah/til-25-data-chefs/main/media/asr/sample_1.wav)
         *   Ground Truth: "Operation Echelon has yielded significant progress in our pursuit of the rogue AI droid BH-2000. Our surveillance drones have identified its current location in sector 7G, and our ground units are mob..."
 *   **Future Work:**
     *   Experiment with different pre-trained model sizes (e.g., `wav2vec2-base` vs. `wav2vec2-large-robust`) to balance accuracy and speed.
